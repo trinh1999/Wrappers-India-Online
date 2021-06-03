@@ -17,5 +17,6 @@ urlpatterns = [
     	path("products/<str:catg>", views.view_all, name="saler_products_view_all"),
     	path("product/<int:prod_id>", views.productView, name="SalerProductView"),
     	path("checkout/", views.checkout, name = "checkout")
+		
 
 	]

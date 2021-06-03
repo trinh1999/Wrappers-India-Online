@@ -7,10 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 <link rel="stylesheet" href="{% static 'saler/css/home_style.css' %}">
-<title>Wrappers </title>
+<title>BoEC</title>
 
 {% endblock saler_head %}
 {% block saler_body %}
+
 <div class="container-fluid">
 	<div class="row pt-1 pb-2 main_slid">
 		<div class="col-md-6 sdasdasd">
@@ -65,12 +66,12 @@
 		<!--Slideshow starts here -->
 		{% for product, range, nSlides in allProds %}
 
-		<h2>Flash Sale On <b>{{product.0.category}}</b></h2>
+		<h2>Flash Sale On <b style="color: black;">{{product.0.category}}</b></h2>
 		<div id="demo{{forloop.counter}}" class="carousel carousel1 slide" data-ride="carousel" data-interval="0">
 			<div style="text-align: center;">
 				<a href="/seller/products/{{product.0.category}}" class="btn"
-					style="color: #be1493; font-size: 14px; padding-top: 0;  margin-top: -20px;">
-					<i class="fa fa-eye" aria-hidden="true" ></i> View All
+					style="color: #080808; font-size: 14px; padding-top: 0;  margin-top: -20px;">
+					<i class="fa fa-eye" aria-hidden="true" ></i>Xem
 				</a></div>
 			<ol class="carousel-indicators">
 				<li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
@@ -98,7 +99,7 @@
 											{{i.product_name}}</a></b>
 									<p class="item-price"><span><i>$</i>{{i.price}}</span></p>
 
-									<a id="{{i.product_id}}" class="btn btn-primary add_to_cart">Add to Cart</a>
+									<a id="{{i.product_id}}" class="btn btn-primary add_to_cart">Thêm vào giỏ hàng</a>
 								</div>
 							</div>
 						</div>

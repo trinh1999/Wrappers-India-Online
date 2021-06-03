@@ -45,12 +45,12 @@
 	}
 
 	.prod1212 .thumb-content .btn {
-		color: #be1499;
+		color: #be2714;
 		font-size: 11px;
 		text-transform: uppercase;
 		font-weight: bold;
 		background: none;
-		border: 1px solid #be1499;
+		border: 1px solid #be2714;
 		padding: 6px 14px;
 		margin-top: 5px;
 		line-height: 16px;
@@ -60,7 +60,7 @@
 	.prod1212 .thumb-content .btn:hover,
 	.thumb-content .btn:focus {
 		color: #fff;
-		background: #be1485;
+		background: #be2714;
 		box-shadow: none;
 	}
 
@@ -77,10 +77,11 @@
 		text-align: center;
 		text-transform: uppercase;
 		position: relative;
+		top: 6px;
 	}
 
 	h2 b {
-		color: #be1499;
+		color: black;
 	}
 
 	h2::after {
@@ -90,7 +91,6 @@
 		margin: 0 auto;
 		height: 4px;
 		border-radius: 1px;
-		background: #be148b;
 		left: 0;
 		right: 0;
 		bottom: -5px;
@@ -126,7 +126,7 @@
 {% endblock saler_head %}
 {% block saler_body %}
 <div class="container-fluid">
-	<h2>All <b>{{catg}}</b> Products</h2>
+	<h2>Toàn bộ sản phẩm <b>{{catg}}</b></h2>
 	<div class="row pt-1">
 		{% for i in product %}
 		<div class="p-1 prod1212">
@@ -139,7 +139,7 @@
 						<small>{{i.product_name}}</small>
 						<p class="item-price"><span><i>$</i>{{i.price}}</span></p>
 
-						<a id="{{i.product_id}}" class="btn btn-primary add_to_cart mt-0">Add to Cart</a>
+						<a id="{{i.product_id}}" class="btn btn-primary add_to_cart mt-0">Thêm vào giỏ hàng</a>
 					</div>
 				</div>
 			</a>

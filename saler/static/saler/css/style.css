@@ -32,13 +32,13 @@
 	color: #fff;
 }
 .side_nav a:hover{
-	color: #be2714;
+	color: rgb(16,191,214);
 }
 .a{
 	color: #fff;
 }
 .a:hover{
-	color: #be2714;
+	color: rgb(16,191,214);
 }
 .logo{
     font-size: 28px;
@@ -50,7 +50,7 @@ nav {
 	height: 100%;
 	position: fixed;
 	left: 40px;
-	background-color: #be2714;
+	background-color: rgb(16,191,214);
 	transition: ;
 	animation-name: nav_animation;
 	animation-duration: .3s;

@@ -9,9 +9,7 @@
 				font-family: Candara;
 		}
 
-		.btn{
-			
-		}
+
 
 		.btn a{
 			color: #080d2b;
@@ -101,10 +99,10 @@
     <div class="container pt-1">
     	<div class="row">
 			<div class="col-md-3" >
-				<img src="{% static 'main/images/logo2.png' %}" style="width: 100%; height: 80px;">
+				<img src="{% static 'main/images/favicon.png' %}" style="width: 56%; height: 85px; margin-left: 64px;">
 			</div>
 			<div class="col-md-9" align="center">
-				<h3 class="detail_heading mt-1">Seller Account Settings</h3>
+				<h3 class="detail_heading mt-1">Quản lý tài khoản</h3>
 			</div>
 
 		</div>
@@ -112,16 +110,16 @@
     	<div class="row">
 			<div class="col-md-3 mt-2">
 				<div class="card">
-					<button type="button" class="btn"  onclick="change('account_update')"><a href="#detail">Update Profile</a></button><hr class="mt-0 mb-0">
-					<button type="button" class="btn" onclick="change('change_pass')"><a href="#detail">Change Password</a></button><hr class="mt-0 mb-0">
-					<button type="button" class="btn" onclick="change('disp_setting')"><a href="#detail">Bank Details</a></button><hr class="mt-0 mb-0">
+					<button type="button" class="btn"  onclick="change('account_update')"><a href="#detail">Thay đổi thông tin cá nhân</a></button><hr class="mt-0 mb-0">
+					<button type="button" class="btn" onclick="change('change_pass')"><a href="#detail">Đổi mật khẩu</a></button><hr class="mt-0 mb-0">
+					<button type="button" class="btn" onclick="change('disp_setting')"><a href="#detail">Tài khoản ngân hàng</a></button><hr class="mt-0 mb-0">
 					
 				</div>
 			</div>
 			<div class="col-md-9 mt-2">
 				<!-- Update Details -->
 				<div class="card detail" id="account_update" style="display: block;">
-					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Your Details</h4>
+					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Thông tin cá nhân</h4>
 					<hr class="mt-1 mb-0">
 					<form method="POST" class="signup_form mr-3 ml-3 mt-1" enctype="multipart/form-data">
 						{% csrf_token %}
@@ -150,11 +148,14 @@
 					      <div class="form-group col-md-3 mb-0">
 					        {{ s_form.gst_Number | as_crispy_field }}
 					      </div>
-					      <div class="form-group col-md-2 mb-0">
+					      <!-- <div class="form-group col-md-2 mb-0">
 					        {{ s_form.landmark | as_crispy_field }}
-					      </div>
+					      </div> -->
 					       <div class="form-group col-md-3 mb-0">
 					        {{ s_form.locality | as_crispy_field }}
+					      </div>
+						  <div class="form-group col-md-2 mb-0">
+					        {{ s_form.shop_Name | as_crispy_field }}
 					      </div>
 					      
 					    </div>
@@ -175,6 +176,7 @@
 					      <div class="form-group col-md-4 mb-0 removeing">
 					        {{ s_form.state | as_crispy_field }}
 					      </div>
+						  
 					      <div class="form-group col-md-4 mb-0 removeing">
 					        {{ s_form.pincode | as_crispy_field }}
 					      </div>					      
@@ -186,8 +188,8 @@
 				</div>
 
 				<!-- Change Password -->
-				<div class="card detail" id="change_pass" style="display: none;">
-					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Change Password</h4>
+				<div class="card detail" id="change_pass" style="display: none; height: 429px;">
+					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Đổi mật khẩu</h4>
 					<hr class="mt-1 mb-0">
 					<form method="POST" class="signup_form mr-3 ml-3 mt-1" enctype="multipart/form-data">
 						{% csrf_token %}
@@ -195,14 +197,14 @@
 							{{ pass_change_form | crispy}}
 						</fieldset>
 						<section class="mt-4 mr-1 ml-1">
-							<button type="submit" class="sub_btn" style="float: right; margin-top: -45px; width: 200px;">Change Password</button>
+							<button type="submit" class="sub_btn" style="float: right; margin-top: -30px; width: 150px;">Save</button>
 						</section>
 					</form>
 				</div>
 
 				<!-- Account Settings -->
 				<div class="card detail pb-3" id="disp_setting" style="display: none;">
-					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Bank Account</h4>
+					<h4 class="ml-3 mt-2"  style="color: #080d2b; font-family: Comic Sans MS;">Tài khoản ngân hàng</h4>
 					<hr class="mt-1 mb-0">
 					<form method="POST" class="signup_form mr-3 ml-3 mt-1" enctype="multipart/form-data">
 						{% csrf_token %}
@@ -221,7 +223,7 @@
 					      
 					    </div>
 					    <section class="mt-4 mr-1 ml-1">
-							<button type="submit" class="sub_btn" style="float: right; margin-top: -25px; width: 200px;">Save</button>
+							<button type="submit" class="sub_btn" style="float: right; margin-top: -25px; width: 138px;">Save</button>
 						</section>
 					</form>
 				</div>

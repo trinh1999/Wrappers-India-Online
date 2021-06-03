@@ -13,13 +13,32 @@
 	<link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'saler/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'saler/css/style.css' %}" rel="stylesheet">
-	<title>Shopping Online</title>
+	<title>BoEC Online</title>
 
 	{% block saler_head %}
 	{% endblock saler_head %}
 </head>
+<style>
+	.side_nav a{
+		font-size: 30px;
+		color: #fff;
+	}
+	.side_nav a:hover{
+		color: #be2714;
+	}
+	.a{
+		color: #fff;
+	}
+	.a:hover{
+		color: #be2714;
+	}
+	.i{
+		color: rgb(16,191,214);
+		
+	}
 
-<body style="background: #e2eaef; font-family: 'Open Sans', sans-serif;">
+</style>
+<body style="background: rgb(16,191,214); font-family: 'Open Sans', sans-serif;">
 	<div class="side_nav" id="nav" style="z-index: 99;">
 		<a onclick="menuDisp()" onmouseenter="document.getElementById('wallet').style.left = '-400px';"
 			data-toggle="tooltip" data-placement="top" title="Menu"><i class="fa fa-bars a" aria-hidden="true"></i>
@@ -28,20 +47,20 @@
 			data-toggle="tooltip" data-placement="top" title="Home"><i class="fa fa-home" aria-hidden="true"></i>
 		</a>
 		<a onmouseenter="document.getElementById('wallet').style.left = '-400px';" href="{% url 'dashboard' %}"
-			data-toggle="tooltip" data-placement="top" title="Dashboard"><i class="fa fa-tachometer"
-				aria-hidden="true"></i>
+			data-toggle="tooltip" data-placement="top" title="Đơn hàng"><i class="fa fa-tachometer"
+				aria-hidden="true" ></i>
 		</a>
 		<a onmouseenter="document.getElementById('wallet').style.left = '-400px';" href="{% url 'add_product' %}"
-			data-toggle="tooltip" data-placement="top" title="Add Product"><i class="fa fa-plus-square"
+			data-toggle="tooltip" data-placement="top" title="Thêm sản phẩm" ><i class="fa fa-plus-square"
 				aria-hidden="true"></i></a>
 		<a onmouseenter="document.getElementById('wallet').style.left = '-400px';" href="{% url 'view_products' %}"
-			data-toggle="tooltip" data-placement="top" title="View My Products"><i class="fa fa-eye"
+			data-toggle="tooltip" data-placement="top" title="Danh sách sản phẩm"><i class="fa fa-eye"
 				aria-hidden="true"></i></a>
 
 		<a href="##" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus"
 					data-html="true"
-					data-content="<a href='{% url 'saler_account_settings' %}'>Account Settings</a>" onmouseenter="document.getElementById('wallet').style.left = '-400px';" data-toggle="tooltip"
-			 title="User Profile"><i class="fa fa-user a" aria-hidden="true"></i></a>
+					data-content="<a href='{% url 'saler_account_settings' %}'>Quản lý tài khoản</a>" onmouseenter="document.getElementById('wallet').style.left = '-400px';" data-toggle="tooltip"
+			 title="Hồ sơ cá nhân"><i class="fa fa-user a" aria-hidden="true"></i></a>
 
 		<a onmouseenter="document.getElementById('wallet').style.left = '-400px';" href="{% url 'logout' %}"
 			data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"
@@ -89,10 +108,10 @@
 				</ul>
 			</li>-->
 			<li>
-				<a href="/contact">Contact Us</a>
+				<a href="#">Liên hệ</a>
 			</li> 
 			<li>
-				<a href="#">Terms & Conditions</a>
+				<a href="#">Điều khoản</a>
 			</li>
 		</ul>
 		<section style="bottom: 0; position: absolute; width: 100%; background-color: #231f20; color: #fff;">
@@ -102,7 +121,7 @@
 			<i class="fa fa-twitter-square" aria-hidden="true"></i>
 			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 			<i class="fa fa-rss-square" aria-hidden="true"></i>
-			| &copy; 2020
+			| &copy; 2021
 		</section>
 	</nav>
 
@@ -112,10 +131,10 @@
 			<li class="p-1">
 				<a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"
 						style="display: block;"><sup style="font-size: 12px;"> (<span
-								id="cart_no">{{cart_element_no}}</span>)</sup></i>View Cart</a>
+								id="cart_no">{{cart_element_no}}</span>)</sup></i>Giỏ hàng</a>
 			</li>
 			<li class="p-1">
-				<a href="{% url 'seller_orders' %}"><i class="fa fa-archive" aria-hidden="true" style="display: block;"></i>My Orders</a>
+				<a href="{% url 'seller_orders' %}"><i class="fa fa-archive" aria-hidden="true" style="display: block;"></i>Đơn hàng</a>
 			</li>
 			<!-- <li class="p-1">
 				<a href="#"><i class="fa fa-history" aria-hidden="true" style="display: block;"></i>History</a>

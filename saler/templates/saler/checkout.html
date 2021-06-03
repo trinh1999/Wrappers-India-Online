@@ -11,10 +11,11 @@
         text-align: center;
         text-transform: uppercase;
         position: relative;
+        top: 9px;
     }
 
     h3 b {
-        color: #be1485;
+        color:black;
     }
 
     h3::after {
@@ -23,17 +24,21 @@
         position: absolute;
         margin: 0 auto;
         height: 4px;
-        border-radius: 1px;
-        background: #be1485;
         left: 0;
         right: 0;
         bottom: -5px;
     }
+    .btn-danger {
+        color: #fff;
+        background-color: black;
+        border-color: black;
+    }
+    
 </style>
 {% endblock saler_head %}
 {% block saler_body %}
 <div class="container">
-    <h3><b>Checkout</b></h3>
+    <h3><b>Thủ tục thanh toán</b></h3>
     <div class="col my-4">
         <div class="my-4">
             <ul class="list-group">
@@ -46,11 +51,11 @@
                 {% endfor %}
             </ul>
         </div>
-        <b style="float: right;">Total Payable <i>$</i>{{total}} </b>.
+        <b style="float: right;">Tổng tiền thanh toán: <i>$</i>{{total}} </b>.
     </div>
     <hr>
     <div class="col my-4">
-        <h4 style="text-align: center;">Enter Address & Other Details:</h4>
+        <h4 style="text-align: center;">Nhập thông tin chi tiết</h4>
         <form method="post" action="#">{% csrf_token %}
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -85,7 +90,7 @@
                     {{address_form.pincode|as_crispy_field}}
                 </div>
             </div>
-            <button type="submit" class="btn btn-danger">Payment</button>
+            <button type="submit" class="btn btn-danger" >Thanh toán</button>
         </form>
     </div>
 </div>
